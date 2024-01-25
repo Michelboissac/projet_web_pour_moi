@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Mes mangas</title>
+</head>
+<body>
+	<h1>Liste de genes</h1>
+	<ul>
+		{% for book in books %}
+		<li><a href="{%url 'mangalib:show' book.id %}">{{ book.title }}<a/></li>
+		{% endfor %}
+	</ul>
+</body>
+
+</html>
